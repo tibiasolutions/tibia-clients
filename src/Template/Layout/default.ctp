@@ -1,57 +1,110 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		<?= $this->fetch('title') ?>
+	</title>
+	<?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+	<?= $this->Html->css(['bootstrap.min', 'style', 'social-media', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']) ?>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+	<?= $this->Html->script(['jquery.min', 'bootstrap.min']) ?>
+
+	<?= $this->fetch('meta') ?>
+	<?= $this->fetch('css') ?>
+	<?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
+	<div id="topo" class="hidden-xs">
+		<h1>
+			Tibia Clients <small>Downloads Linux & Windows</small>
+		</h1>
+	</div>
+
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand visible-xs" href="#">
+				Tibia Clients
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="/clients/windows">Windows</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="/clients/linux">Linux</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="/about">About</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+				<li>
+					<a href="https://tibiaclients.slack.com">Slack</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<?= $this->Flash->render() ?>
+	<div id="wrapper" class="container">
+		<div class="content">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-8">
+					<?= $this->fetch('content') ?>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="widget">
+						<div class="panel panel-default">
+							<div class="panel-heading"><i class="fa fa-bar-chart" aria-hidden="true"></i> Statiscts</div>
+							<div class="panel-body new-body">
+								<p>We have a total of <strong>60955</strong> downloads from <strong>238</strong> clients.</p>
+							</div>
+							<div class="panel-footer new-footer"></div>
+						</div>
+					</div>
+					<div class="widget">
+						<div class="panel panel-default">
+							<div class="panel-heading"><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Follow Us</div>
+							<div class="panel-body text-center">
+								<a href="https://github.com/tibiaclients/" class="btn btn-social-icon btn-github" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://www.facebook.com/tibiaclients/" class="btn btn-social-icon btn-facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/tibiaclients/" class="btn btn-social-icon btn-twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="https://plus.google.com/100761390530590591841" class="btn btn-social-icon btn-google-plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+								<a href="https://www.instagram.com/tibiaclients/" class="btn btn-social-icon btn-instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+							</div>
+							<div class="panel-footer new-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="col-md-12">
+					<div id="footer">
+						<div class="footer-copy pull-left">&copy; 2016 - Tibia Clients</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
