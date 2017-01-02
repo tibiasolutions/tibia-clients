@@ -49,13 +49,14 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home'], ['locale' => 'en']);
-	
-	$routes->connect('/:lang', ['controller' => 'Pages', 'action' => 'display', 'home'], ['locale' => 'en|pt']);
-	
-	$routes->connect('/:lang/*', ['controller' => 'Pages', 'action' => 'display'], ['locale' => 'en|pt']);
+    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-    $routes->connect('/:lang/:controller/:action/*', [], ['locale' => 'en|pt']);
+	$routes->connect('/:controller/:action/*', []);
+
+	$routes->connect('/lang/*', ['controller' => 'App', 'action' => 'changeLang']);
+
+	$routes->connect('/about', ['controller' => 'Pages', 'action' => 'display', 'about']);
+	$routes->connect('/contact', ['controller' => 'Pages', 'action' => 'display', 'contact']);
 
     /**
      * Connect catchall routes for all controllers.

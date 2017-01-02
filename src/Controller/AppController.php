@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -65,5 +66,19 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+		
+		$lang = $this->request->session()->read('lang');
+
+		if (empty($lang)) {
+			return;
+		}
+
+		I18n::locale($lang);
     }
+
+	public function changeLang($lang = 'en_US')
+	{
+		$this->request->session()->write('lang', $lang);
+		return $this->redirect($this->request->referer());
+	}
 }

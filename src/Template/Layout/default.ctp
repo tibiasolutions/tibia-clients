@@ -39,25 +39,27 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="/">Home</a>
+					<?= $this->Html->link('Home', ['controller' => 'Pages', 'action' => 'display', 'home']); ?>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="/clients/windows">Windows</a>
+							<?= $this->Html->link('Windows', ['controller' => 'Clients', 'action' => 'windows']); ?>
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="/clients/linux">Linux</a>
+							<?= $this->Html->link('Linux', ['controller' => 'Clients', 'action' => 'linux']); ?>
 						</li>
 					</ul>
 				</li>
-				<li><a href="/about">About</a></li>
+				<li>
+					<?= $this->Html->link('About', ['controller' => 'Pages', 'action' => 'display', 'about']); ?>
+				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
 				<li>
-					<a href="/contact">Contact</a>
+					<?= $this->Html->link('Contact', ['controller' => 'Pages', 'action' => 'display', 'contact']); ?>
 				</li>
 				<li>
 					<a href="https://tibiaclients.slack.com">Slack</a>
