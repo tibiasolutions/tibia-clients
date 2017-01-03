@@ -13,7 +13,9 @@
 				<tbody>
 					<?php foreach ($clients as $client): ?>
 					<tr>
-						<td class="text-center"><?= str_replace(",", ".", $this->Number->format($client->version, ['pattern' => strlen($client->version) == 4 ? '##,##' : strlen($client->version) == 3 ? '#,##' : '#,#'])) ?></th>
+						<?php if (!empty($client->exe_url)): ?>
+						<?php $version = str_replace("n", "", $client->version); ?>
+						<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
 						<td class="text-center"><?= $client->downloads ?></td>
 						<td class="text-center">
 							<a class="btn btn-green btn-xs strong" href="#" role="button" data-toggle="tooltip" data-placement="top" title="<?= !empty($client->exe_size) ? __('Size: {0}', [$client->exe_size])  : "" ?>"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
@@ -23,6 +25,7 @@
 							<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
 							<?php endif; ?>
 						</td>
+						<?php endif; ?>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>

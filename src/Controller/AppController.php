@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\I18n\I18n;
+use Cake\ORM\TableRegistry;
 
 /**
  * Application Controller
@@ -69,11 +70,17 @@ class AppController extends Controller
 		
 		$lang = $this->request->session()->read('lang');
 
-		if (empty($lang)) {
-			return;
+		if (!empty($lang)) {
+			I18n::locale($lang);
 		}
 
-		I18n::locale($lang);
+		$clients = TableRegistry::get('Clients')
+			->find()
+			->select(['downloads'])
+			->where(['exe_url !=' => '']);
+
+		$this->set('total_clients', $clients->count());
+		$this->set('total_downloads', $clients->sumOf('downloads'));
     }
 
 	public function changeLang($lang = 'en_US')

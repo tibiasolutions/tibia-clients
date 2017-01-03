@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `exe_size` char(10) NOT NULL DEFAULT '',
   `zip_url` varchar(100) DEFAULT '',
   `zip_size` char(10) DEFAULT '',
+  `sort_order` int(11) NOT NULL,
+  `featured` tinyint(1) NOT NULL DEFAULT '0',
   `downloads` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `version` (`version`)

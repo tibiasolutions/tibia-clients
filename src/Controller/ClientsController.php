@@ -9,7 +9,7 @@ class ClientsController extends AppController
 			->find()
 			->select(['id', 'version', 'exe_url', 'exe_size', 'zip_url', 'zip_size', 'downloads'])
 			->where(['plataform =' => 'windows'])
-			->order(['version' => 'DESC']);
+			->order(['sort_order' => 'ASC']);
 
         $this->set(compact('clients'));
         $this->set('_serialize', ['clients']);
@@ -21,7 +21,7 @@ class ClientsController extends AppController
 			->find()
 			->select(['id', 'version', 'exe_url', 'exe_size', 'zip_url', 'zip_size', 'downloads'])
 			->where(['plataform =' => 'linux'])
-			->order(['version' => 'DESC']);
+			->order(['sort_order' => 'ASC']);
 
         $this->set(compact('clients'));
         $this->set('_serialize', ['clients']);
