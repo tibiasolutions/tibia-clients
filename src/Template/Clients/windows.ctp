@@ -1,6 +1,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><?= __("Windows Client's List") ?></div>
 		<div class="panel-body new-body">
+			<?php if ($clients->count() > 0): ?>
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -26,6 +27,9 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
+			<?php else: ?>
+			<h4><?= __("No clients found.") ?></h4>
+			<?php endif; ?>
 		</div>
 	<div class="panel-footer new-footer"></div>
 </div>

@@ -17,6 +17,13 @@ class ClientsController extends AppController
 
 	public function linux()
 	{
-		$this->render();
+		$clients = $this->Clients
+			->find()
+			->select(['id', 'version', 'exe_url', 'exe_size', 'zip_url', 'zip_size', 'downloads'])
+			->where(['plataform =' => 'linux'])
+			->order(['version' => 'DESC']);
+
+        $this->set(compact('clients'));
+        $this->set('_serialize', ['clients']);
     }
 }
