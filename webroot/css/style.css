@@ -23,17 +23,22 @@ body {
 	min-height: 300px;
 }
 
-#footer {
-	margin: 5px 0 10px 0;
-	color: #DDDDDD;
-	height: 30px;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #e7e7e7;
 }
-#footer a {
-	color: #DDDDDD;
+
+.container .text-muted {
+  margin: 20px 0;
 }
-#footer .footer-copy {
-	padding-left: 20px;
-	text-align: right;
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* News adjusts */

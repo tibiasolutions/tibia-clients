@@ -99,15 +99,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div id="col-md-12">
-					<div id="footer">
-						<div class="footer-copy pull-left">&copy; 2016 - Tibia Clients</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
+
+	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; <?= date("Y") ?> - Tibia Clients</p>
+      </div>
+    </footer>
 
 	<script>
 		$(function () {
