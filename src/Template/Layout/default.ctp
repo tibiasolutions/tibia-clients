@@ -18,7 +18,7 @@
 	<?= $this->fetch('script') ?>
 </head>
 <body>
-	<div id="topo" class="hidden-xs">
+	<div id="top" class="hidden-xs">
 		<h1>
 			Tibia Clients <small>Downloads Linux & Windows</small>
 		</h1>
@@ -108,7 +108,7 @@
       </div>
     </footer>
 
-	<a href="#0" class="cd-top">Top</a>
+	<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
 
 	<script>
 		$(function () {

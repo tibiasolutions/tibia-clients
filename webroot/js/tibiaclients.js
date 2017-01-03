@@ -12,19 +12,26 @@ $(document).ready(function(){
 		add : function() {
 			if(this.flagAdd) {
 				for(var i=0; i < this.elements.length; i++) {
+					var content = " navbar-fixed-top navbar-inverse";
 					document.getElementById(this.elements[i]).className = document.getElementById(this.elements[i]).className.replace( /(?:^|\s)navbar-static-top(?!\S)/g , '' );
-					document.getElementById(this.elements[i]).className += " navbar-fixed-top navbar-inverse";
-					$('.cd-top').addClass('cd-fade-out');
+					if (!document.getElementById(this.elements[i]).className.match(content)) {
+						 document.getElementById(this.elements[i]).className += content;
+					}
 				}
+
 				this.flagAdd = false;
 			}
 		},
 
 		remove: function() {
 			for(var i=0; i < this.elements.length; i++) {
+				var content = " navbar-static-top";
 				document.getElementById(this.elements[i]).className = document.getElementById(this.elements[i]).className.replace( /(?:^|\s)navbar-fixed-top navbar-inverse(?!\S)/g , '' );
-				document.getElementById(this.elements[i]).className += " navbar-static-top";
+				if (!document.getElementById(this.elements[i]).className.match(content)) {
+					document.getElementById(this.elements[i]).className += content;
+				}
 			}
+
 			this.flagAdd = true;
 		}
 
@@ -50,13 +57,10 @@ $(document).ready(function(){
 
 		if(yOffset < currYOffSet) {
 			myNavBar.add();
+			$('#back-to-top').fadeIn();
 		} else {
 			myNavBar.remove();
-		}
-
-		( currYOffSet > yOffset ) ? $('.cd-top').addClass('cd-is-visible') : $('.cd-top').removeClass('cd-is-visible cd-fade-out');
-		if (currYOffSet > offset_opacity ) { 
-			$('.cd-top').addClass('cd-fade-out');
+			$('#back-to-top').fadeOut();
 		}
 	}
 
@@ -67,11 +71,12 @@ $(document).ready(function(){
 		offSetManager();		
 	}
 	
-	$('.cd-top').click(function () {
+	$('#back-to-top').click(function () {
 		$('body,html').animate({
-			scrollTop: 0 ,
-		 	}, 700
-		);
+			scrollTop: 0
+		}, 700);
+
+		return false;
 	});
 
 	/**
