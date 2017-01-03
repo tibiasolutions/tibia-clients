@@ -3,9 +3,15 @@
 	padding: 0 0 0 0;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	background-image: url('img/bg.png');
 	background-attachment: fixed;
+	margin-bottom: 60px;
 }
 
 #topo {
