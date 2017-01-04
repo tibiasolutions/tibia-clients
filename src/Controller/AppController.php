@@ -18,6 +18,7 @@ use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\I18n\I18n;
 use Cake\ORM\TableRegistry;
+use Cake\Cache\Cache;
 
 /**
  * Application Controller
@@ -74,13 +75,19 @@ class AppController extends Controller
 			I18n::locale($lang);
 		}
 
-		$clients = TableRegistry::get('Clients')
-			->find()
-			->select(['downloads'])
-			->where(['exe_url !=' => '']);
+		$clients = Cache::read('clients_cached', 'fiveminutes');
+		if (!$clients) {
+			$query = TableRegistry::get('Clients')
+				->find()
+				->select(['downloads'])
+				->where(['exe_file !=' => '']);
 
-		$this->set('total_clients', $clients->count());
-		$this->set('total_downloads', $clients->sumOf('downloads'));
+			$clients = ['clients' => $query->count(), 'downloads' => $query->sumOf('downloads')];
+			Cache::write('clients_cached', $clients, 'fiveminutes');
+		}
+
+		$this->set('total_clients', $clients['clients']);
+		$this->set('total_downloads', $clients['downloads']);
     }
 
 	public function changeLang($lang = 'en_US')

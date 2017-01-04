@@ -83,3 +83,11 @@ define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'vendor' . DS . 'cakephp' . DS . 'c
  */
 define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 define('CAKE', CORE_PATH . 'src' . DS);
+
+/**
+ * Path to the clients.
+ */
+define('WINDOWS_EXE', ROOT . DS . 'static' . DS . 'clients' . DS . 'exe' . DS . 'windows' . DS);
+define('WINDOWS_ZIP', ROOT . DS . 'static' . DS . 'clients' . DS . 'zip' . DS . 'windows' . DS);
+define('LINUX_EXE', ROOT . DS . 'static' . DS . 'clients' . DS . 'exe' . DS . 'linux' . DS);
+define('LINUX_ZIP', ROOT . DS . 'static' . DS . 'clients' . DS . 'zip' . DS . 'linux' . DS);

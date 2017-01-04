@@ -97,7 +97,7 @@ return [
          */
         '_cake_core_' => [
             'className' => 'File',
-            'prefix' => 'myapp_cake_core_',
+            'prefix' => 'tibiaclients_core_',
             'path' => CACHE . 'persistent/',
             'serialize' => true,
             'duration' => '+1 years',
@@ -112,10 +112,22 @@ return [
          */
         '_cake_model_' => [
             'className' => 'File',
-            'prefix' => 'myapp_cake_model_',
+            'prefix' => 'tibiaclients_model_',
             'path' => CACHE . 'models/',
             'serialize' => true,
             'duration' => '+1 years',
+            'url' => env('CACHE_CAKEMODEL_URL', null),
+        ],
+
+		/**
+         * Configure the cache for tibia clients
+         */
+        'fiveminutes' => [
+            'className' => 'File',
+            'prefix' => 'tibiaclients_fiveminutes_',
+            'path' => CACHE . 'persistent/',
+            'serialize' => true,
+            'duration' => '+5 minutes',
             'url' => env('CACHE_CAKEMODEL_URL', null),
         ],
     ],

@@ -39,28 +39,16 @@
 		<div id="top-menu" class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
 			<ul class="nav navbar-nav">
 				<li>
-					<?= $this->Html->link(__("Home"), ['controller' => 'Pages', 'action' => 'display', 'home']); ?>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li>
-							<?= $this->Html->link(__("Windows"), ['controller' => 'Clients', 'action' => 'windows']); ?>
-						</li>
-						<li class="divider"></li>
-						<li>
-							<?= $this->Html->link(__("Linux"), ['controller' => 'Clients', 'action' => 'linux']); ?>
-						</li>
-					</ul>
+					<?= $this->Html->link(__("Home"), ['controller' => 'Clients', 'action' => 'index']); ?>
 				</li>
 				<li>
 					<?= $this->Html->link(__("About"), ['controller' => 'Pages', 'action' => 'display', 'about']); ?>
 				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
 				<li>
 					<?= $this->Html->link(__("Contact"), ['controller' => 'Pages', 'action' => 'display', 'contact']); ?>
 				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
 				<li>
 					<a href="https://tibiaclients.slack.com">Slack</a>
 				</li>

@@ -8,4 +8,6 @@
     RewriteEngine on
     RewriteRule    ^$    webroot/    [L]
     RewriteRule    (.*) webroot/$1    [L]
+	RewriteRule    ^$    static/    [L]
+    RewriteRule    (.*) static/$1    [L]
 </IfModule>
