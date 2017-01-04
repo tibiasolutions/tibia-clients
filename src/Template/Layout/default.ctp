@@ -20,7 +20,7 @@
 <body>
 	<div id="top" class="hidden-xs">
 		<h1>
-			Tibia Clients <small>Downloads Linux & Windows</small>
+			Tibia Clients <small>Downloads Windows & Linux</small>
 		</h1>
 	</div>
 
