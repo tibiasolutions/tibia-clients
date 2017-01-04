@@ -1,5 +1,10 @@
+<?php
+	$title = __("Windows Client's List");
+	$this->assign('title', $title);
+?>
+
 <div class="panel panel-default">
-	<div class="panel-heading"><?= __("Windows Client's List") ?></div>
+	<div class="panel-heading"><?= $title ?></div>
 		<div class="panel-body">
 			<?php if ($clients->count() > 0): ?>
 			<table class="table table-striped table-hover">
@@ -31,7 +36,7 @@
 				</tbody>
 			</table>
 			<?php else: ?>
-			<h4><?= __("No clients found.") ?></h4>
+			<p><?= __("No clients found.") ?></p>
 			<?php endif; ?>
 		</div>
 	<div class="panel-footer new-footer"></div>

@@ -6,6 +6,10 @@ use App\Model\Behavior\MEGA;
 
 class ClientsController extends AppController
 {
+	public function index() 
+	{
+	}
+
     public function windows()
 	{
 		$clients = $this->Clients

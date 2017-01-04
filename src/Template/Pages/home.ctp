@@ -1,3 +1,8 @@
+<?php
+	$title = __("Home");
+	$this->assign('title', $title);
+?>
+
 <div class="panel panel-default">
 	<div class="panel-heading"><?= __('Welcome adventurer') ?></div>
 		<div class="panel-body new-body">

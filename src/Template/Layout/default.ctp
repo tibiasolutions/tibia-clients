@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		<?= $this->fetch('title') ?>
+		<?= $this->fetch('title') . " - Tibia Clients" ?>
 	</title>
 	<?= $this->Html->meta('icon') ?>
 
@@ -36,7 +36,7 @@
 				Tibia Clients
 			</a>
 		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+		<div id="top-menu" class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
 			<ul class="nav navbar-nav">
 				<li>
 					<?= $this->Html->link(__("Home"), ['controller' => 'Pages', 'action' => 'display', 'home']); ?>
@@ -114,6 +114,23 @@
 		$(function () {
 		  $('[data-toggle="tooltip"]').tooltip()
 		});
+
+		$(document).ready(function () {
+			setNavigation();
+		});
+
+		function setNavigation() {
+			var path = window.location.pathname;
+			path = path.replace(/\/$/, "");
+			path = decodeURIComponent(path);
+			$("#top-menu a").each(function () {
+				var href = $(this).attr('href');
+				if (path === href) {
+					$(this).parent().addClass('active');
+					$(this).parent().parent().parent().addClass('active');
+				}
+			});
+		}
 	</script>
 </body>
 </html>
