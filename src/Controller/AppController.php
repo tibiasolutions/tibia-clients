@@ -80,7 +80,8 @@ class AppController extends Controller
 			$query = TableRegistry::get('Clients')
 				->find()
 				->select(['downloads'])
-				->where(['exe_file !=' => '']);
+				->where(['exe_file !=' => ''])
+				->orWhere(['zip_file !=' => '']);
 
 			$clients = ['clients' => $query->count(), 'downloads' => $query->sumOf('downloads')];
 			Cache::write('clients_cached', $clients, 'fiveminutes');

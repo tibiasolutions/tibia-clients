@@ -41,9 +41,9 @@ class ClientsController extends AppController
 			$w11x = $this->Clients
 				->find()
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
-				->where(['plataform =' => 'windows'])
 				->andWhere(['version =' => '1100'])
 				->orWhere(['version =' => '1000n'])
+				->andWhere(['plataform =' => 'windows'])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
