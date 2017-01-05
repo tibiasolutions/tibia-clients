@@ -4,6 +4,11 @@
 #    RequestHeader unset Proxy
 #</IfModule>
 
+#Force www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^tibia-clients.com [NC]
+RewriteRule ^(.*)$ http://www.tibia-clients.com/$1 [L,R=301,NC]
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteRule    ^$    webroot/    [L]

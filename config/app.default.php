@@ -130,6 +130,15 @@ return [
             'duration' => '+5 minutes',
             'url' => env('CACHE_CAKEMODEL_URL', null),
         ],
+
+		'tenminutes' => [
+            'className' => 'File',
+            'prefix' => 'tibiaclients_tenminutes_',
+            'path' => CACHE . 'persistent/',
+            'serialize' => true,
+            'duration' => '+10 minutes',
+            'url' => env('CACHE_CAKEMODEL_URL', null),
+        ],
     ],
 
     /**

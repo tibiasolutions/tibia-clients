@@ -87,7 +87,6 @@ define('CAKE', CORE_PATH . 'src' . DS);
 /**
  * Path to the clients.
  */
-define('WINDOWS_EXE', ROOT . DS . 'static' . DS . 'clients' . DS . 'exe' . DS . 'windows' . DS);
-define('WINDOWS_ZIP', ROOT . DS . 'static' . DS . 'clients' . DS . 'zip' . DS . 'windows' . DS);
-define('LINUX_EXE', ROOT . DS . 'static' . DS . 'clients' . DS . 'exe' . DS . 'linux' . DS);
-define('LINUX_ZIP', ROOT . DS . 'static' . DS . 'clients' . DS . 'zip' . DS . 'linux' . DS);
+define('CLIENT_EXE_PATH', ROOT . DS . 'static' . DS . 'clients' . DS . 'exe' . DS);
+define('CLIENT_ZIP_PATH', ROOT . DS . 'static' . DS . 'clients' . DS . 'zip' . DS);
+define('CLIENT_TAR_PATH', ROOT . DS . 'static' . DS . 'clients' . DS . 'tar' . DS);

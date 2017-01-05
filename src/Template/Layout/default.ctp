@@ -127,7 +127,7 @@
 			path = decodeURIComponent(path);
 			$("#top-menu a").each(function () {
 				var href = $(this).attr('href');
-				if (path === href) {
+				if (path.replace("/", "") === href.replace("/", "")) {
 					$(this).parent().addClass('active');
 					$(this).parent().parent().parent().addClass('active');
 				}
