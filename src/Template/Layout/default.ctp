@@ -32,6 +32,17 @@
 	</script>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
 	<div id="top" class="hidden-xs">
 		<h1>
 			Tibia Clients <small>Downloads Windows & Linux</small>
@@ -82,6 +93,9 @@
 							<div class="panel-heading"><i class="fa fa-bar-chart" aria-hidden="true"></i> <?= __("Statistics") ?></div>
 							<div class="panel-body new-body">
 								<p><?= __("We have a total of <strong>{0}</strong> downloads from <strong>{1}</strong> clients.", [$total_downloads, $total_clients]) ?></p>
+								<div class="row text-center">
+									<div class="fb-like" data-href="http://www.tibia-clients.com/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+								</div>
 							</div>
 							<div class="panel-footer new-footer"></div>
 						</div>
