@@ -4,10 +4,25 @@
     <?= $this->Html->charset() ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
-		<?= $this->fetch('title') . " - Tibia Clients" ?>
-	</title>
-	<?= $this->Html->meta('icon') ?>
+	<title><?= $this->fetch('title') . " :: Tibia Clients" ?></title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+	<link rel="manifest" href="/icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
 	<?= $this->Html->meta('keywords', 'tibia,11.00,10.98,10.97,10.96,10.95,10.94,10.93,10.92,10.91,10.90,10.82,10.81,10.80,10.79,10.78,10.77,10.76,10.75,10.74,10.73,10.72,10.71,10.70,10.64,10.63,10.62,10.61,10.60,10.59,10.58,10.57,10.56,10.55,10.54,10.53,10.52,10.51,10.50,10.41,10.40,10.39,10.38,10.37,10.36,10.35,10.34,10.33,10.32,10.31,10.30,10.22,10.21,10.20,10.13,10.12,10.11,10.10,10.02,10.01,10.00,9.86,9.85,9.84,9.83,9.82,9.81,9.80,9.70,9.60,9.54,9.52,9.44,9.43,9.42,9.41,9.40,9.31,9.20,9.10,9.00,8.71,8.70,8.62,8.61,8.60,8.57,8.56,8.55,8.54,8.53,8.52,8.50,8.42,8.41,8.40,8.31,8.30,8.22,8.21,8.20,8.11,8.10,8.00,7.92,7.81,7.9,7.8,7.72,7.7,7.6,7.55,7.41,7.4,7.3,7.27,7.26,7.24,7.23,7.21,7.13,7.1,7.02,7.01,7.0,6.1,6.0,4.0,3.1,3.0,download,client,tibia king,xtibia,otland,otserv'); ?>
 
