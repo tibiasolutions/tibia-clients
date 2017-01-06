@@ -66,7 +66,7 @@
 
 	<nav id="header" class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
