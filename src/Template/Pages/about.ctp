@@ -25,11 +25,11 @@
 									<ul class="text-center">
 									<a href="https://www.facebook.com/bmminervino"><li><i class="fa fa-facebook"></i></li></a>
 									<a href="https://github.com/brunominervino"><li><i class="fa fa-github"></i></li></a>
-									<a href="mailto:bruno@tibia-clients.com"><li><i class="fa fa-envelope-o"></i></li></a>
+									<a href="mailto:bruno@tibiasolutions.com"><li><i class="fa fa-envelope-o"></i></li></a>
 									</ul>
 								</div>
 								<h1>Bruno Minervino</h1>
-								<h2>Software Developer</h2>
+								<h2>Developer</h2>
 							</div>
 							<!-- End Profile -->
 						
@@ -40,11 +40,11 @@
 									<ul class="text-center">
 									<a href="https://www.facebook.com/celopeccin"><li><i class="fa fa-facebook"></i></li></a>
 									<a href="https://github.com/celopeccin"><li><i class="fa fa-github"></i></li></a>
-									<a href="mailto:marcelo@tibia-clients.com"><li><i class="fa fa-envelope-o"></i></li></a>
+									<a href="mailto:marcelo@tibiasolutions.com"><li><i class="fa fa-envelope-o"></i></li></a>
 									</ul>
 								</div>
 								<h1>Marcelo Peccin</h1>
-								<h2>Software Developer</h2>
+								<h2>Developer</h2>
 							</div>
 							<!-- End Profile -->
 						</div>
