@@ -1,11 +1,11 @@
 <?php
-	$title = __("Choose a plataform");
+	$title = __("Home");
 	$this->assign('title', $title);
 	$error = __("No clients found.");
 ?>
 
 <div class="panel panel-default">
-	<div class="panel-heading"><?= $title ?></div>
+	<div class="panel-heading"><?= __("Choose a plataform") ?></div>
 	<div class="panel-body new-body">
 		<div class="tabbable">
 			<ul class="nav nav-tabs navbar-right">
