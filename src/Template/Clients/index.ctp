@@ -39,26 +39,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($wfeatured as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -75,26 +75,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($w11x as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -111,26 +111,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($w10x as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -147,26 +147,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($w9x as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -183,26 +183,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($w8x as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -219,26 +219,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($w7x as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -255,26 +255,26 @@
 										</thead>
 										<tbody>
 											<?php foreach ($windows as $client): ?>
-											<tr>
 												<?php if (!empty($client->exe_file) OR !empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->exe_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?php if (!empty($client->exe_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
-													<?php endif; ?>
-													<?php if (!empty($client->zip_file)): ?>
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
-													<?php else: ?>
-													<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
-													<?php endif; ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->exe_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?php if (!empty($client->exe_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .exe', ['controller' => 'Clients', 'action' => 'download', $client->version, "exe", "windows"], ['class' => 'btn btn-green btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-green btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .exe</a>
+														<?php endif; ?>
+														<?php if (!empty($client->zip_file)): ?>
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download .zip', ['controller' => 'Clients', 'action' => 'download', $client->version, "zip", "windows"], ['class' => 'btn btn-red btn-xs strong', 'escape' => false]); ?>
+														<?php else: ?>
+														<a class="btn btn-red btn-xs strong" href="#" role="button" disabled="disabled"><i class="fa fa-download" aria-hidden="true"></i> Download .zip</a>
+														<?php endif; ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -312,17 +312,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($lfeatured as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -339,17 +339,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($l11x as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -366,17 +366,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($l10x as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -393,17 +393,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($l9x as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -420,17 +420,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($l8x as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -447,17 +447,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($l7x as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
@@ -474,17 +474,17 @@
 										</thead>
 										<tbody>
 											<?php foreach ($linux as $client): ?>
-											<tr>
 												<?php if (!empty($client->zip_file)): ?>
-												<?php $version = str_replace("n", "", $client->version); ?>
-												<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
-												<td class="text-center"><?= $client->zip_size ?></td>
-												<td class="text-center"><?= $client->downloads ?></td>
-												<td class="text-center">
-													<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
-												</td>
+												<tr>
+													<?php $version = str_replace("n", "", $client->version); ?>
+													<td class="text-center"><?= str_replace(",", ".", $this->Number->format($version, ['pattern' => strlen($version) == 4 ? '##,##' : strlen($version) == 3 ? '#,##' : '#,#'])) ?></th>
+													<td class="text-center"><?= $client->zip_size ?></td>
+													<td class="text-center"><?= $client->downloads ?></td>
+													<td class="text-center">
+														<?= $this->Html->link('<i class="fa fa-download" aria-hidden="true"></i> Download', ['controller' => 'Clients', 'action' => 'download', $client->version, "tar", "linux"], ['class' => 'btn btn-purple btn-xs strong', 'escape' => false]); ?>
+													</td>
+												</tr>
 												<?php endif; ?>
-											</tr>
 											<?php endforeach; ?>
 										</tbody>
 									</table>
