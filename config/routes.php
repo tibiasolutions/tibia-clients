@@ -56,7 +56,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 	$routes->connect('/lang/*', ['controller' => 'App', 'action' => 'changeLang']);
 
 	$routes->connect('/about', ['controller' => 'Pages', 'action' => 'display', 'about']);
-	$routes->connect('/contact', ['controller' => 'Pages', 'action' => 'display', 'contact']);
+	$routes->connect('/contact', ['controller' => 'Contact', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
