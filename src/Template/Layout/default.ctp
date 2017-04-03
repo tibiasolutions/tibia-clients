@@ -86,7 +86,7 @@
 					<?= $this->Html->link(__("About"), ['controller' => 'Pages', 'action' => 'display', 'about']); ?>
 				</li>
 				<li>
-					<?= $this->Html->link(__("Contact"), ['controller' => 'Pages', 'action' => 'display', 'contact']); ?>
+					<?= $this->Html->link(__("Contact"), ['controller' => 'Contact', 'action' => 'index']); ?>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
