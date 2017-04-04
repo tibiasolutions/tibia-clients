@@ -30,7 +30,7 @@
 							</div>
 							<div class="form-group">
 								<?= $this->Form->label('message', __("Message {0}", '<span class="text-danger">*</span>'), ['data-toggle' => 'tooltip', 'title' => __('Required.'), 'escape' => false]) ?>
-								<?= $this->Form->input('message', ['type' => 'textarea', 'class' => 'form-control', 'placeholder' => __("Enter your message..."), 'label' => false]) ?>
+								<?= $this->Form->input('message', ['type' => 'textarea', 'class' => 'form-control vresize', 'placeholder' => __("Enter your message..."), 'label' => false]) ?>
 							</div>
 							<?= $this->Form->button(__('{0} Send', '<i class="fa fa-envelope-o"></i>'), ['class' => 'btn btn-primary-outline', 'escape' => false]) ?>
 							<?= $this->Form->end() ?>
