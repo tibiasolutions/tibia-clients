@@ -17,6 +17,7 @@ class ClientsController extends AppController
 				->find()
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'windows'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -30,6 +31,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'windows'])
 				->andWhere(['featured =' => 1])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -44,6 +46,7 @@ class ClientsController extends AppController
 				->andWhere(['version =' => '1100'])
 				->orWhere(['version =' => '1000n'])
 				->andWhere(['plataform =' => 'windows'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -58,6 +61,7 @@ class ClientsController extends AppController
 				->where(['plataform =' => 'windows'])
 				->andWhere(['version LIKE' => '10%'])
 				->andWhere(['version NOT LIKE' => '%n'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -71,6 +75,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'windows'])
 				->andWhere(['version LIKE' => '9%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -84,6 +89,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'windows'])
 				->andWhere(['version LIKE' => '8%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -97,6 +103,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'exe_file', 'exe_size', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'windows'])
 				->andWhere(['version LIKE' => '7%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -109,6 +116,7 @@ class ClientsController extends AppController
 				->find()
 				->select(['id', 'version', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'linux'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -121,6 +129,7 @@ class ClientsController extends AppController
 				->find()
 				->select(['id', 'version', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'linux'])
+				->andWhere(['visible =' => 1])
 				->andWhere(['featured =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
@@ -136,6 +145,7 @@ class ClientsController extends AppController
 				->andWhere(['version =' => '1100'])
 				->orWhere(['version =' => '1000n'])
 				->andWhere(['plataform =' => 'linux'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -150,6 +160,7 @@ class ClientsController extends AppController
 				->where(['plataform =' => 'linux'])
 				->andWhere(['version LIKE' => '10%'])
 				->andWhere(['version NOT LIKE' => '%n'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -163,6 +174,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'linux'])
 				->andWhere(['version LIKE' => '9%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -176,6 +188,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'linux'])
 				->andWhere(['version LIKE' => '8%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -189,6 +202,7 @@ class ClientsController extends AppController
 				->select(['id', 'version', 'zip_file', 'zip_size', 'featured', 'downloads'])
 				->where(['plataform =' => 'linux'])
 				->andWhere(['version LIKE' => '7%'])
+				->andWhere(['visible =' => 1])
 				->order(['sort_order' => 'ASC'])
 				->toArray();
 
@@ -228,7 +242,7 @@ class ClientsController extends AppController
 
 		$client = $this->Clients
 			->find()
-			->where(['version =' => $version, 'plataform =' => $plataform])
+			->where(['version =' => $version, 'plataform =' => $plataform, 'visible =' => 1])
 			->first();
 
 		if ($client == null 
